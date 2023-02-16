@@ -129,7 +129,45 @@ const About = () => {
                     <Title>
                     Role of Authors: 
                     </Title>
-                    <Desc>State the role of each author  </Desc>
+                    <Desc>State the role of each author</Desc>
+                </Div>
+                <Div>
+                    <ol>
+                        <li>
+                            <h4>Introduction</h4>
+                            <p>The introduction should contain a background to the study, precise description of the problem and aims of the study in clear terms. It should clearly state a precise review of related and relevant literature to the subject matter, and the knowledge gap. The introduction should not contain either findings or conclusions.  </p>
+                        </li>
+
+                        <li>
+                            <h4>Materials and Methods</h4>
+                            <p>Materials and methods used should be complete enough to provide sufficient details of procedures used in the study, however, only truly new procedures should be described in detail; previously published procedures should be cited, and important modifications to published procedures should be mentioned briefly. Methods commonly use need not be described in detail. </p>
+                        </li>
+
+                        <li>
+                            <h4>Results</h4>
+                            <p>Results should be precise and clearly presented in a logical sequence in the text, tables and figure. Repetitive presentation of the same data in different forms should be avoided. The results should be written in the past tense when describing findings in the authors’ research. Results should be explained without referring to the literature. Results should not contain deliberations, assumptions or interpretation of data  </p>
+                        </li>
+
+                        <li>
+                            <h4>Discussion</h4>
+                            <p>The discussion should consider the results in relation to any hypothesis advanced in the Introduction and place the study in the context of other work. Results and Discussion sections can be combined as per requirement of research type. </p>
+                        </li>
+
+                        <li>
+                            <h4>Conclusion</h4>
+                            <p>The conclusion should be concise and be based on findings. The content of the conclusion should not substantially duplicate the abstract.   </p>
+                        </li>
+
+                        <li>
+                            <h4>Acknowledgment</h4>
+                            <p>The contribution of people, grants, funds and others should be acknowledged in brief.</p>
+                        </li>
+
+                        <li>
+                            <h4>References</h4>
+                            <p>The references should be typed single spaced using the latest APA style of referencing. All in-text citations must be referenced.  </p>
+                        </li>
+                    </ol>
                 </Div>
             </Wrapper>
         </Container2>
