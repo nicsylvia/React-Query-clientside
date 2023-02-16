@@ -107,6 +107,30 @@ const About = () => {
                     </Title>
                     <Desc>Abstract should not exceed 250 words and should describe the scope, methodology and main findings in clear terms. The abstract should be written in past tense with complete sentences and active verbs.  Abstract should use Standard Nomenclature and not include abbreviations. No literature should be cited in the abstract</Desc>
                 </Div>
+                <Div>
+                    <Title>
+                    Keywords:
+                    </Title>
+                    <Desc>Key words (3-5 words) should be provided below the Abstract to assist with indexing of the article.</Desc>
+                </Div>
+                <Div>
+                    <Title>
+                    Source of funding:  
+                    </Title>
+                    <Desc>The source of funding for the research should be expressly stated in clear terms. </Desc>
+                </Div>
+                <Div>
+                    <Title>
+                    Conflict of interest: 
+                    </Title>
+                    <Desc>State conflict of interest if any </Desc>
+                </Div>
+                <Div>
+                    <Title>
+                    Role of Authors: 
+                    </Title>
+                    <Desc>State the role of each author  </Desc>
+                </Div>
             </Wrapper>
         </Container2>
     </div>
