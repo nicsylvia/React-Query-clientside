@@ -1,18 +1,23 @@
 import React from 'react'
+import styled from 'styled-components';
 
 const Form = () => {
   return (
     <div>
-      <center>
-        <input type="text" placeholder='Enter post tittle' />
-        <br />
-        <br />
-        <input type="text" placeholder='Describe your post' />
-        <br /><br />
-        <button>Upload Post</button>
-      </center>
+        <Container>
+
+        </Container>
     </div>
   )
 }
 
-export default Form
+export default Form;
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #afaf46;
+`;

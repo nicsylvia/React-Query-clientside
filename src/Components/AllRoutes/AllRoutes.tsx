@@ -6,7 +6,7 @@ const AllRoutes = () => {
 
     const element = useRoutes([
         {
-            path: "/make-a-post",
+            path: "/",
             element: <MakeApost />
         }
     ]) 
