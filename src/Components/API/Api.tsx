@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const Endpoint = "http://localhost:3400/api";
+const Endpoint = "http://localhost:3400/api/post";
 
 export const GetAll = async() =>{
-    return await axios.get(`${Endpoint}/post/getposts`).then((res) => res.data)
+    return await axios.get(`${Endpoint}/getposts`).then((res) => res.data)
 }
