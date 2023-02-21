@@ -4,14 +4,22 @@ import { GetAll } from '../API/Api';
 import { useQuery } from '@tanstack/react-query';
 
 const Form = () => {
+
+  const FetchData = useQuery({
+    queryKey: ["AllPosts"],
+    queryFn: GetAll
+  });
+
+  console.log('====================================');
+  console.log(FetchData);
+  console.log('====================================');
   return (
     <div>
         <Container>
         <input type="text" placeholder='Enter post tittle' />
         <br />
-        {/* <br /> */}
         <input type="text" placeholder='Describe your post' />
-        <br /><br />
+        <br />
         <button>Upload Post</button>
         
         <Div>
