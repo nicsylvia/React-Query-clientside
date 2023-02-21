@@ -1,5 +1,6 @@
 import React from 'react'
-import { useRoutes } from 'react-router-dom'
+import { useRoutes } from 'react-router-dom';
+import MakeApost from "../Practice/MakeApost"
 
 const AllRoutes = () => {
 
