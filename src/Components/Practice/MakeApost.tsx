@@ -1,20 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
+import { GetAll } from '../API/Api';
+import { useQuery } from '@tanstack/react-query';
 
 const Form = () => {
   return (
     <div>
         <Container>
-        <div>
         <input type="text" placeholder='Enter post tittle' />
         <br />
-        <br />
+        {/* <br /> */}
         <input type="text" placeholder='Describe your post' />
         <br /><br />
         <button>Upload Post</button>
-        <br />
-        <br />
-        </div>
         
         <Div>
           <h1>VIEW POST</h1>
@@ -35,6 +33,7 @@ const Container = styled.div`
   justify-content: center;
   background-color: white;
   flex-direction: column;
+  margin-top: 50px;
   input{
     width: 300px;
     height: 30px;
