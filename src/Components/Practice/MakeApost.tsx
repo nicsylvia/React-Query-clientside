@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import { GetAll, CreatePost } from '../API/Api';
 import { useQuery, useMutation } from '@tanstack/react-query';
+import { useQueryClient } from '@tanstack/react-query';
 
 const Form = () => {
+
+  const queryClient = useQueryClient();
 
   // To read from our api endpoints
   const FetchData = useQuery({
@@ -13,18 +16,39 @@ const Form = () => {
 
   // To write to or create post, we use mutation
   const PostData = useMutation({
-    mutationFn: CreatePost
-  })
+    mutationFn: CreatePost,
+    onSuccess: (data) =>{
+      queryClient.invalidateQueries(["AllPosts"])
+    }
+  });
+
+  const [title, setTitle] = useState("")
+  const [description, setDescription] = useState("")
+
+  const creatingPost = () =>{
+    PostData.mutate({
+      title,
+      description
+    })
+  }
 
   return (
     <div>
         <Container>
           <h1>Add Post</h1>
-        <input type="text" placeholder='Enter post tittle' />
+        <input type="text"
+        onChange={(e) =>{
+          setTitle(e.target.value)
+        }}
+        placeholder='Enter post tittle' />
         <br />
-        <input type="text" placeholder='Describe your post' />
+        <input type="text" 
+        onChange={(e) =>{
+          setDescription(e.target.value)
+        }}
+        placeholder='Describe your post' />
         <br />
-        <button>Upload Post</button>
+        <button onClick={creatingPost}>Upload Post</button>
 
         <Div>
         <h1>VIEW POST</h1>

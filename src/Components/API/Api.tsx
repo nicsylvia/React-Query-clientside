@@ -12,5 +12,5 @@ export const GetAll = async() =>{
 }
 
 export const CreatePost = async({title, description}: PostData) =>{
-    return await axios.post(`${Endpoint}/createpost`).then((res) => res.data)
+    return await axios.post(`${Endpoint}/createpost`, {title, description}).then((res) => res.data)
 }
