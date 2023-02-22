@@ -22,6 +22,7 @@ const Form = () => {
 
         <Div>
         <h1>VIEW POST</h1>
+        <Hold>
         {
           FetchData?.data?.map((props: any) =>(
             <Card key={props._id}>
@@ -30,6 +31,7 @@ const Form = () => {
             </Card>
           ))
         }
+        </Hold>
         </Div>
         </Container>
     </div>
@@ -37,6 +39,12 @@ const Form = () => {
 }
 
 export default Form;
+
+const Hold = styled.div`
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -65,8 +73,7 @@ const Container = styled.div`
 `;
 const Div = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 `;
@@ -77,5 +84,4 @@ const Card = styled.div`
   margin: 20px;
   text-align: center;
   color: white;
-  /* padding: 10px; */
 `;
