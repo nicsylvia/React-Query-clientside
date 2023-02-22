@@ -1,14 +1,20 @@
 import React from 'react'
 import styled from 'styled-components';
 import { GetAll, CreatePost } from '../API/Api';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useMutation } from '@tanstack/react-query';
 
 const Form = () => {
 
+  // To read from our api endpoints
   const FetchData = useQuery({
     queryKey: ["AllPosts"],
     queryFn: GetAll
   });
+
+  // To write to or create post, we use mutation
+  const PostData = useMutation({
+    mutationFn: CreatePost
+  })
 
   return (
     <div>
