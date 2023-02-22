@@ -53,6 +53,9 @@ const Form = () => {
         <Div>
         <h1>VIEW POST</h1>
         <Hold>
+          {
+            FetchData?.isLoading ? <h3>Posts Loading</h3> : null
+          }
         {
           FetchData?.data?.map((props: any) =>(
             <Card key={props._id}>
@@ -73,6 +76,8 @@ export default Form;
 const Hold = styled.div`
   width: 95%;
   display: flex;
+  /* align-items: center;
+  justify-content: center; */
   flex-wrap: wrap;
 `;
 
