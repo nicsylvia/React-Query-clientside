@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { GetAll, CreatePost } from '../API/Api';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { useQueryClient } from '@tanstack/react-query';
+import { Circles } from 'react-loader-spinner';
 
 const Form = () => {
 
@@ -32,6 +33,17 @@ const Form = () => {
     })
   }
 
+  // For loading :
+  <Circles
+  height="100"
+  width="100"
+  color="#e62ccd"
+  ariaLabel="circles-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
+
   return (
     <div>
         <Container>
@@ -54,7 +66,7 @@ const Form = () => {
         <h1>VIEW POST</h1>
         <Hold>
           {
-            FetchData?.isLoading ? <h3>Posts Loading</h3> : null
+            FetchData?.isLoading ? <Circles /> : null
           }
         {
           FetchData?.data?.map((props: any) =>(
@@ -76,8 +88,8 @@ export default Form;
 const Hold = styled.div`
   width: 95%;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  /* align-items: center; */
+  /* justify-content: center; */
   flex-wrap: wrap;
 `;
 
@@ -113,7 +125,7 @@ const Div = styled.div`
     flex-direction: column;
 `;
 const Card = styled.div`
-  width: 400px;
+  width: 350px;
   padding: 10px;
   background-color: purple;
   margin: 20px;
