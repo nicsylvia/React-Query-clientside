@@ -10,21 +10,26 @@ const Form = () => {
     queryFn: GetAll
   });
 
-  console.log('====================================');
-  console.log(FetchData);
-  console.log('====================================');
   return (
     <div>
         <Container>
+          <h1>Add Post</h1>
         <input type="text" placeholder='Enter post tittle' />
         <br />
         <input type="text" placeholder='Describe your post' />
         <br />
         <button>Upload Post</button>
-        
+
         <Div>
-          <h1>VIEW POST</h1>
-        <Card></Card>
+        <h1>VIEW POST</h1>
+        <Card>
+          {
+            FetchData.data.map((props: any) =>{
+              <h1 key={props._id}>{props.title}</h1>
+              <p>{props.description}</p>
+            })
+          }
+        </Card>
         </Div>
         </Container>
     </div>
@@ -55,6 +60,7 @@ const Container = styled.div`
     outline: purple;
     border: 2px solid purple;
     border-color: purple;
+    cursor: pointer;
   }
 `;
 const Div = styled.div`
@@ -66,8 +72,10 @@ const Div = styled.div`
 `;
 const Card = styled.div`
   width: 400px;
-  height: 400px;
+  padding: 10px;
   background-color: purple;
   margin: 20px;
+  text-align: center;
+  color: white;
   /* padding: 10px; */
 `;
