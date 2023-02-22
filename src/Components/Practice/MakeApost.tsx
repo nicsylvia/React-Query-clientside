@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { GetAll } from '../API/Api';
+import { GetAll, CreatePost } from '../API/Api';
 import { useQuery } from '@tanstack/react-query';
 
 const Form = () => {
@@ -22,14 +22,14 @@ const Form = () => {
 
         <Div>
         <h1>VIEW POST</h1>
-        <Card>
-          {
-            FetchData.data.map((props: any) =>{
-              <h1 key={props._id}>{props.title}</h1>
+        {
+          FetchData?.data?.map((props: any) =>(
+            <Card key={props._id}>
+              <h1>{props.title}</h1>
               <p>{props.description}</p>
-            })
-          }
-        </Card>
+            </Card>
+          ))
+        }
         </Div>
         </Container>
     </div>
@@ -66,7 +66,7 @@ const Container = styled.div`
 const Div = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 `;
